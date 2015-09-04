@@ -36,13 +36,26 @@
 
 <body id="page-top">
 
-    <header>
+    <header id="header">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>Countdown to Leeds 2016</h1>
                 <hr>
                 
                 <p id="countdown"></p>
+                <script>
+  (function() {
+    var cx = '010275890342069434514:yphdggv9fow';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
             </div>
         </div>
     </header>
@@ -64,8 +77,9 @@
         var currentTime = new Date();
         var leeds2016 = new Date(2016, 8, 24, 12, 0, 0, 0);
         var diff = Math.round((leeds2016 - currentTime)/42120)/10000;
-
+        document.getElementById("header").style.backgroundImage = "url(./img/header1.jpg)";
         var countdown = document.getElementById("countdown").innerHTML = diff + " Leeds Fests until Leeds Fest";
+
     </script>
 
 </body>
